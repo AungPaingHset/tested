@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Waste Management | Cleaner Future</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <span class="logo-icon">♻️</span>
+          <span class="brand-text">EcoSmart</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#tracker">Bin Tracker</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Smart Waste Management for a Cleaner Future</h1>
+          <p class="hero-description">
+            Join us in revolutionizing waste management through innovative technology.
+            Together, we can create sustainable communities and protect our planet for future generations.
+          </p>
+          <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">What is Smart Waste Management?</h2>
+        <p class="section-subtitle">
+          Smart waste management uses technology to optimize waste collection, reduce environmental impact,
+          and promote recycling through real-time monitoring and data-driven solutions.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🗑️</div>
+            <h3>Waste Sorting</h3>
+            <p>Intelligent systems help identify and separate different types of waste for proper disposal and recycling.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">♻️</div>
+            <h3>Recycling</h3>
+            <p>Advanced recycling processes transform waste materials into valuable resources, reducing landfill burden.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3>Sustainability</h3>
+            <p>Eco-friendly practices ensure long-term environmental health and resource conservation for our planet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Bin Tracker -->
+    <section id="tracker" class="tracker">
+      <div class="container">
+        <h2 class="section-title">Smart Bin Tracker</h2>
+        <p class="section-subtitle">Monitor waste bin levels in real-time and optimize collection schedules</p>
+
+        <div class="bins-grid">
+          <!-- Plastic Bin -->
+          <div class="bin-card">
+            <div class="bin-header">
+              <div class="bin-icon plastic-icon">🔵</div>
+              <h3>Plastic Waste</h3>
+            </div>
+            <div class="bin-level">
+              <div class="level-label">
+                <span>Fill Level</span>
+                <span class="level-percentage" id="plastic-level">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill plastic-fill" id="plastic-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <button class="empty-btn" onclick="emptyBin('plastic')">Empty Bin</button>
+          </div>
+
+          <!-- Paper Bin -->
+          <div class="bin-card">
+            <div class="bin-header">
+              <div class="bin-icon paper-icon">📄</div>
+              <h3>Paper Waste</h3>
+            </div>
+            <div class="bin-level">
+              <div class="level-label">
+                <span>Fill Level</span>
+                <span class="level-percentage" id="paper-level">45%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill paper-fill" id="paper-progress" style="width: 45%"></div>
+              </div>
+            </div>
+            <button class="empty-btn" onclick="emptyBin('paper')">Empty Bin</button>
+          </div>
+
+          <!-- Organic Bin -->
+          <div class="bin-card">
+            <div class="bin-header">
+              <div class="bin-icon organic-icon">🌿</div>
+              <h3>Organic Waste</h3>
+            </div>
+            <div class="bin-level">
+              <div class="level-label">
+                <span>Fill Level</span>
+                <span class="level-percentage" id="organic-level">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill organic-fill" id="organic-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <button class="empty-btn" onclick="emptyBin('organic')">Empty Bin</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waste Sorting Tips -->
+    <section id="tips" class="tips">
+      <div class="container">
+        <h2 class="section-title">Waste Sorting Tips</h2>
+        <p class="section-subtitle">Learn how to properly sort your waste for maximum recycling efficiency</p>
+
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-icon">🔵</div>
+            <h3>Plastic</h3>
+            <ul>
+              <li>Rinse containers before recycling</li>
+              <li>Remove caps and labels when possible</li>
+              <li>Check recycling numbers (1-7)</li>
+              <li>Avoid contaminated plastics</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">📄</div>
+            <h3>Paper</h3>
+            <ul>
+              <li>Keep paper dry and clean</li>
+              <li>Flatten cardboard boxes</li>
+              <li>Remove plastic windows from envelopes</li>
+              <li>No food-stained paper</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">🥫</div>
+            <h3>Metal & Glass</h3>
+            <ul>
+              <li>Rinse cans and bottles</li>
+              <li>Remove lids and caps</li>
+              <li>Separate different metal types</li>
+              <li>No broken glass in recycling</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">🌿</div>
+            <h3>Organic</h3>
+            <ul>
+              <li>Food scraps and yard waste</li>
+              <li>Coffee grounds and filters</li>
+              <li>Eggshells and nutshells</li>
+              <li>No meat, dairy, or oils</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">⚡</div>
+            <h3>Electronics</h3>
+            <ul>
+              <li>Take to e-waste facilities</li>
+              <li>Remove batteries first</li>
+              <li>Donate working devices</li>
+              <li>Data wipe before disposal</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">🔋</div>
+            <h3>Hazardous</h3>
+            <ul>
+              <li>Batteries and paint</li>
+              <li>Chemicals and cleaners</li>
+              <li>Use special collection sites</li>
+              <li>Never mix with regular trash</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="logo-icon">♻️</span>
+            <span class="brand-text">EcoSmart</span>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 EcoSmart. All rights reserved. Making the world cleaner, one bin at a time.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
